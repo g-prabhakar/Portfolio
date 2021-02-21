@@ -34,6 +34,8 @@
     padding: 10px;
     background-color: transparent;
     border: 2px solid #e31b6d;
+    color: #fff;
+    border-radius: 10px;
 }
 
 #contact-form button {
@@ -43,4 +45,59 @@
     background-color: #e31b6d;
     font-size: 1.2em;
     font-weight: bolder;
+    margin-bottom: 40px;
+}
+
+#top {
+    position: relative;
+    left: 50%;
+    top: 25px;
+    transform: translateX(-50%);
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 2.5em;
+    background-color: #e31b6d;
+    border: none;
+}
+
+#top a {
+    color: #fff;
+}
+
+.social-media {
+    width: 100wh;
+    height: 150px;
+    background-color: #1b232f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media button {
+    width: 50px;
+    height: 50px;
+    font-size: 2em;
+    margin: 20px;
+    background-color: #333;
+    border: none;
+}
+
+.social-media button a {
+    color: #fff;
+}
+
+.social-media button:hover, .social-media button:focus {
+    background-color: #00ffff;
+    transition: .2s ease-in;
+}
+
+footer {
+    background-color: #1b232f;
+    height: 50px;
+    text-align: center;
+    color: #00ffff
+}
+
+footer span {
+    color: #e31b6d
 }

@@ -3,7 +3,7 @@ import profile from '../../images/profile.png'
 
 
 const Banner = () => (
-    <div className='banner Home'>
+    <div className='banner Home' id='banner'>
         <div id='intro'>
             <img src={profile} alt='profile'/>
             <h1>Hello, I'm <span>Prabhakar</span></h1>
