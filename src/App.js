@@ -7,10 +7,10 @@ import Contact from './Components/contact/Contact'
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className='app'>
         <Banner />
-        <Contact />
         <Projects />
+        <Contact />
       </div>
     )
   }

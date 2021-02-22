@@ -1,0 +1,36 @@
+.projects {
+    text-align: center;
+    min-height: 600px;
+}
+
+.projects h2 {
+    font-size: 3em;
+}
+
+.project-btns {
+    display: flex;
+    justify-content: center;
+}
+
+.project-btn {
+    margin: 20px;
+    font-size: 1.2em;
+    padding: 5px;
+    width: 150px;
+    border: none;
+    background-color: transparent;
+}
+
+.project-btn:hover, .project-btn:focus {
+    background-color: #e31b6d;
+    color: #fff;
+    border: none;
+    transition: .2s ease-in;
+    border-radius: 5px;
+    border: none;
+}
+
+.project img {
+    width: 350px;
+    height: 300px;
+}
