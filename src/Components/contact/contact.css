@@ -3,6 +3,10 @@
     height: 100vh;
 }
 
+#contact {
+    margin-top: 50px;
+}
+
 .contact h2 {
     color: #fff;
     font-size: 3em;

@@ -18,57 +18,68 @@ class Projects extends Component {
         this.state = {
             projects: [
                 {
+                    type: 'react',
+                    source: quoteMachine,
+                    name: 'Quote Machine'
+                    
+                },
+                {
+                    type: 'react',
+                    source: markup,
+                    name: 'Markup Text'
+                },
+                {
+                    type: 'react',
+                    source: drumMachine,
+                    name: 'Drum Machine'
+                },
+                {
+                    type: 'react',
+                    source: calculator,
+                    name: 'Calculator'
+                },
+                {
+                    type: 'react',
+                    source: pomodoro,
+                    name: 'Pomodoro Clock'
+                },
+                {
                     type: 'htmlCss',
-                    name: tribute,
+                    source: tribute,
+                    name: 'Tribute Page'
                 },
                 {
                     type: 'htmlCss',
-                    name: survey,
+                    source: survey,
+                    name: 'Survey Form'
                 },
                 {
                     type: 'htmlCss',
-                    name: landingPage,
+                    source: landingPage,
+                    name: 'Product Landing Page'
                 },
                 {
                     type: 'htmlCss',
-                    name: documentation,
+                    source: documentation,
+                    name: 'Javascript documentation'
                 },
-                {
-                    type: 'react',
-                    name: quoteMachine,
-                },
-                {
-                    type: 'react',
-                    name: markup,
-                },
-                {
-                    type: 'react',
-                    name: drumMachine,
-                },
-                {
-                    type: 'react',
-                    name: calculator,
-                },
-                {
-                    type: 'react',
-                    name: pomodoro,
-                },
+                
 
             ],
-            currentProjects: []
+            currentProjects: [],
+            isHover: false
         }
 
         this.allProjects = this.allProjects.bind(this)
         this.htmlCssProjects = this.htmlCssProjects.bind(this)
         this.reactProjects = this.reactProjects.bind(this)
+        this.effect = this.effect.bind(this)
     }
 
     allProjects() {
         this.setState({
             currentProjects: this.state.projects,
         })
-
-        
     }
 
     htmlCssProjects() {
@@ -81,8 +92,6 @@ class Projects extends Component {
         this.setState({
             currentProjects: htmlCssProjects,
         })
-
-        
     }
 
     reactProjects() {
@@ -99,9 +108,33 @@ class Projects extends Component {
         
     }
 
+    effect() {
+        this.setState(prevState => ({
+            isHover: !prevState.isHover
+        }))
+
+        console.log(this.state.isHover)
+    }
+
+    componentDidMount() {
+        this.setState({
+            currentProjects: this.state.projects
+        })
+    }
+
 
     render() {
-        console.log(this.state.currentProjects)
+
+        let projx = this.state.currentProjects.map(proj => {
+            const activeClass = this.state.isHover ? 'active' : '';
+
+            return (
+                <div className={`project ${activeClass}`} id={proj.name} onMouseEnter={this.effect} onMouseLeave={this.effect} key={proj.name}>
+                    <span className='text'><p>{proj.name}</p></span>
+                    <img src={proj.source} key={proj.name}/>
+                </div>
+            )
+        })
 
         return (
             <div className='projects'>
@@ -111,15 +144,15 @@ class Projects extends Component {
                     <button className='project-btn' id='htmlCss' onClick={this.htmlCssProjects}>HTML/CSS</button>
                     <button className='project-btn' id='react' onClick={this.reactProjects}>REACT</button>
                 </div>
+                <div className='display'>
+                <div className='project'>
+                    {projx}
+                </div>
+                </div>
             </div>
         )
     }
 }
 
-const Project = (props) => (
-    <div className='project'>
-        <img src={props.image} alt='document' />
-    </div>
-)
 
 export default Projects
