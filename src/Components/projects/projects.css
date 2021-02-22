@@ -32,6 +32,9 @@
 
 .project {
     margin: 5px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .project img {
@@ -46,24 +49,4 @@
     margin: 0 10px 0 10px;
     margin-right: 30px;
     margin-left: 30px;
-}
-
-.project .text {
-    display: none;
-}
-
-.active {
-    position: relative
-}
-
-.active .text {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: block
-}
-
-.active img {
-    opacity: 0;
 }

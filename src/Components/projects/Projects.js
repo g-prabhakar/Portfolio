@@ -67,13 +67,14 @@ class Projects extends Component {
 
             ],
             currentProjects: [],
-            isHover: false
+            isHover: false,
+            hoverIndex: null,
         }
 
         this.allProjects = this.allProjects.bind(this)
         this.htmlCssProjects = this.htmlCssProjects.bind(this)
         this.reactProjects = this.reactProjects.bind(this)
-        this.effect = this.effect.bind(this)
+        //this.effect = this.effect.bind(this)
     }
 
     allProjects() {
@@ -108,13 +109,7 @@ class Projects extends Component {
         
     }
 
-    effect() {
-        this.setState(prevState => ({
-            isHover: !prevState.isHover
-        }))
 
-        console.log(this.state.isHover)
-    }
 
     componentDidMount() {
         this.setState({
@@ -122,19 +117,28 @@ class Projects extends Component {
         })
     }
 
+    // effect() {
+    //     this.setState({
+    //         hoverIndex: props.index
+    //     })
+    // }
+    
 
     render() {
 
-        let projx = this.state.currentProjects.map(proj => {
-            const activeClass = this.state.isHover ? 'active' : '';
-
+        let projx = this.state.currentProjects.map((proj, index) => {
             return (
-                <div className={`project ${activeClass}`} id={proj.name} onMouseEnter={this.effect} onMouseLeave={this.effect} key={proj.name}>
-                    <span className='text'><p>{proj.name}</p></span>
-                    <img src={proj.source} key={proj.name}/>
-                </div>
+                <Project 
+                    key={index} 
+                    source={proj.source} 
+                    name={proj.name} alt={proj.name} 
+                    handleOver={() => this.setState({hoverIndex: index})}
+                    className='active'
+                />
             )
         })
+
+        console.log(this.state.hoverIndex)
 
         return (
             <div className='projects'>
@@ -154,5 +158,11 @@ class Projects extends Component {
     }
 }
 
+const Project = (props) => (
+    <div className='Project' key={props.index} onMouseEnter={props.handleOver}>
+        <span>{props.name}</span><br />
+        <img src={props.source} alt={props.name}/>
+    </div>
+)
 
 export default Projects
