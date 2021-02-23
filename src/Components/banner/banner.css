@@ -8,7 +8,7 @@
 
 #intro {
     position: relative;
-    top: 40%;
+    top: 250px;
     text-align: center;
     transform: translate(0, -50%);
 }
@@ -24,7 +24,7 @@
 
 .banner {
     font-size: 1.2em;
-    border: 5px solid #00ffff
+    border: 5px solid #00ffff;
 }
 
 .banner button {
@@ -41,7 +41,7 @@
     color: #fff;
 }
 
-.banner button:hover, .banner button:focus, a:focus, a:hover {
+.banner button:hover, .banner button:focus, .banner a:focus, .banner a:hover {
     background-color: #00ffff;
     border-color: #00ffff;
     transition: 0.2s ease-in;
