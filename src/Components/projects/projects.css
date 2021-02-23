@@ -21,7 +21,7 @@
     font-size: 1.2em;
 }
 
-.project-btn:hover  {
+.project-btn:hover , .project-btn:focus{
     background-color: #e31b6d;
     color: White;
     transition: .2s ease-in;
