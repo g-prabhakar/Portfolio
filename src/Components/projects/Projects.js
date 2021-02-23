@@ -76,9 +76,6 @@ class Projects extends Component {
 
             ],
             currentProjects: [],
-            allActive: false,
-            htmlActive: false,
-            reactActive: false
         }
 
         this.allProjects = this.allProjects.bind(this)

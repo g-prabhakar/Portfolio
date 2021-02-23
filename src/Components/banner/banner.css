@@ -57,7 +57,7 @@
         height: 100vh;
     }
 
-    h2 {
+    .banner h2 {
         display: none;
     }
 

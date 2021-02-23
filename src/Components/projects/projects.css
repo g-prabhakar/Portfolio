@@ -1,24 +1,27 @@
+.projects h2 {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 3em;
+    opacity: 0.6;
+}
+
 .project-btns {
     margin-top: 50px;
     margin-bottom: 30px;
     display: flex;
     justify-content: space-around;
-
-}
-
-.projects h2 {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 3em;
-    opacity: 0.6;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .project-btn {
-    
+    margin: 5px;
+    text-align: center;
     border: none;
     width: 150px;
     padding: 10px;
     font-size: 1.2em;
+    border: 2px solid #e31b6d;
 }
 
 .project-btn:hover , .project-btn:focus{
@@ -77,6 +80,14 @@
 
 .hover-effect:hover img {
     transition: 0.3s ease-in;
+    transform: scale(1.2);
     opacity: 0;
     z-index: 1;
+}
+
+
+@media screen and (max-wodth: 350px) {
+    .projects h2 {
+        font-size: 1em;
+    }
 }
