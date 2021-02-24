@@ -1,0 +1,29 @@
+@media screen and (max-width: 620px) {
+    .contact h2  {
+        font-size: 2em;
+    }
+
+    #contact-form {
+        justify-content: left;
+        width: 100%;
+    }
+
+
+    #contact-form input, #contact-form textarea {
+        width: 100%;
+    }
+
+    #contact-form textarea {
+        margin: 0 10px;
+    }
+
+    #contact-form button {
+        margin-right: 20%;
+        margin-left: 20%;
+        align-self: center;
+    }
+
+    .social-media button{
+        width: 50px;
+    }
+}

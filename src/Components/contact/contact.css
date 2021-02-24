@@ -2,9 +2,6 @@
     background-color: #333;
     height: 100vh;
     padding-top: 75px;
-}
-
-#contact {
     margin-top: 50px;
 }
 
@@ -71,20 +68,26 @@
 
 .social-media {
     width: 100wh;
-    height: 150px;
     background-color: #1b232f;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    padding-top: 50px;
 }
 
 .social-media button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50px;
     height: 50px;
-    font-size: 2em;
+    padding: 10px;
+    font-size: 1.5em;
     margin: 20px;
     background-color: #333;
     border: none;
+    border-radius: 5px;
 }
 
 .social-media button a {
@@ -106,3 +109,4 @@ footer {
 footer span {
     color: #e31b6d
 }
+

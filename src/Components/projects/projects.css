@@ -1,3 +1,8 @@
+#projects {
+    padding-top: 75px;
+    margin-top: -75px;
+}
+
 .projects h2 {
     text-align: center;
     margin-top: 100px;
@@ -37,8 +42,8 @@
 }
 
 .projects img {
-    width: 300px;
-    height: 250px;
+    max-width: 300px;
+    maxheight: 250px;
 }
 
 .display {
