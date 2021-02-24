@@ -8,7 +8,6 @@ const Navbar = () => (
             <label for='check' className='checkBtn'>
                 <i class="fa fa-bars"></i>
             </label>
-            <label className='logo'>Prabhakar</label>
             <ul>
                 <li><a href='#banner'>Home</a></li>
                 <li><a href='#projects'>Projects</a></li>
